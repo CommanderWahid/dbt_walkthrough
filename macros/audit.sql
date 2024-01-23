@@ -56,7 +56,7 @@
     
     {{ log_audit_event(
         event_name='project run started', 
-        schema_name=get_audit_schema_name(), 
+        schema_name=this.schema,  
         target_name=target.name,
         is_full_refresh=flags.FULL_REFRESH
     )}}
@@ -70,7 +70,37 @@
     
     {{ log_audit_event(
         event_name='project run completed', 
-        schema_name=get_audit_schema_name(), 
+        schema_name=this.schema, 
+        target_name=target.name,
+        is_full_refresh=flags.FULL_REFRESH
+    )}}
+
+{% endmacro%}
+
+
+{# save model start event to target audit table #}
+
+{% macro log_model_start_event() %}
+    
+    {{ log_audit_event(
+        event_name='model run started', 
+        schema_name=this.schema, 
+        model_name=this.name,
+        target_name=target.name,
+        is_full_refresh=flags.FULL_REFRESH
+    )}}
+
+{% endmacro%}
+
+
+{# save model end event to target audit table #}
+
+{% macro log_model_end_event() %}
+    
+    {{ log_audit_event(
+        event_name='model run completed', 
+        schema_name=this.schema, 
+        model_name=this.name,
         target_name=target.name,
         is_full_refresh=flags.FULL_REFRESH
     )}}

@@ -2,34 +2,37 @@ version: 2
 
 models:
   - name: stg_mdm__rate_codes
-    description: Taxi trip rate codes data with basic cleaning and transformation applied, one row per rate code.
+    description: "{{ doc('model_stg_mdm__rate_codes') }}"
     columns:
       - name: rate_code_id
-        description: The unique identifier for each rate code.
+        description: "{{ doc('column_stg_mdm__rate_codes__rate_code_id') }}"
         tests:
           - not_null
           - unique
+
   - name: stg_mdm__trip_modes
-    description: Taxi trip modes data with basic cleaning and transformation applied, one row per trip mode.
+    description: "{{ doc('model_stg_mdm__trip_modes') }}"
     columns:
       - name: trip_mode_id
-        description: The unique identifier for each trip mode.
+        description: "{{ doc('column_stg_mdm__trip_modes__trip_mode_id') }}"
         tests:
           - not_null
           - unique
+
   - name: stg_mdm__trip_types
-    description: taxi trip types data with basic cleaning and transformation applied, one row per trip type.
+    description: "{{ doc('model_stg_mdm__trip_types') }}"
     columns:
       - name: trip_type_id
-        description: The unique identifier for each trip type.
+        description: "{{ doc('column_stg_mdm__trip_types__trip_type_id') }}"
         tests:
           - not_null
           - unique
+
   - name: stg_mdm__trip_zones
-    description: Taxi trip zones data with basic cleaning and transformation applied, one row per location (borough, servcie zone, zone).
+    description: "{{ doc('model_stg_mdm__trip_zones') }}"
     columns:
       - name: location_id
-        description: The unique identifier for each location.
+        description: "{{ doc('column_stg_mdm__trip_zones__location_id') }}"
         tests:
           - not_null
           - unique

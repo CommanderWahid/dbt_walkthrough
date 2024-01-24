@@ -9,10 +9,10 @@ sources:
       - refs
     tables:
       - name: rate_code
-        description: Contains information about the different rate codes used for taxi trips.
+        description: "{{ doc('source_rate_code') }}"
       - name: trip_mode
-        description: Contains a list of unique identifiers and corresponding names for the different modes of transportation used during taxi trips.
+        description: "{{ doc('source_trip_mode') }}"
       - name: trip_type
-        description: Contains a list of unique trip types that are used to categorize taxi trips.
+        description: "{{ doc('source_trip_type') }}"
       - name: trip_zone
-        description: Contains information on the different zones and service zones within each borough.
+        description: "{{ doc('source_trip_zone') }}"

@@ -45,4 +45,3 @@ models:
         +tags: refs
         +pre-hook:  "{{ log_model_start_event() }}"
         +post-hook: "{{ log_model_end_event() }}"
-

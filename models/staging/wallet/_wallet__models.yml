@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_wallet__payment_types
+    description: "{{ doc('model_stg_wallet__payment_types') }}"
+    columns:
+      - name: payment_type_id
+        description: "{{ doc('column_stg_wallet__payment_types__payment_type_id') }}"
+        tests:
+          - not_null
+          - unique

@@ -1,0 +1,12 @@
+version: 2 
+
+sources:
+  - name: wallet
+    schema: wallet_payments
+    description: "{{ doc('source_wallet') }}"
+    loader: DataFactory
+    tags:
+      - payments
+    tables:
+      - name: payment_type
+        description: "{{ doc('source_payment_type') }}"

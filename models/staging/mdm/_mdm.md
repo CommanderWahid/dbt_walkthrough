@@ -1,3 +1,19 @@
+{% docs source_rate_code %}
+Contains information about the different rate codes used for taxi trips.
+{% enddocs %}
+
+{% docs source_trip_mode %}
+Contains a list of unique identifiers and corresponding names for the different modes of transportation used during taxi trips.
+{% enddocs %}
+
+{% docs source_trip_type %}
+Contains a list of unique trip types that are used to categorize taxi trips.
+{% enddocs %}
+
+{% docs source_trip_zone %}
+Contains information on the different zones and service zones within each borough.
+{% enddocs %}
+
 {% docs model_stg_mdm__rate_codes %}
 Taxi trip rate codes data with basic cleaning and transformation applied, one row per rate code.
 {% enddocs %}
@@ -28,23 +44,4 @@ Taxi trip zones data with basic cleaning and transformation applied, one row per
 
 {% docs column_stg_mdm__trip_zones__location_id %}
 The unique identifier for each location.
-{% enddocs %}
-
-
-
-
-{% docs source_rate_code %}
-Contains information about the different rate codes used for taxi trips.
-{% enddocs %}
-
-{% docs source_trip_mode %}
-Contains a list of unique identifiers and corresponding names for the different modes of transportation used during taxi trips.
-{% enddocs %}
-
-{% docs source_trip_type %}
-Contains a list of unique trip types that are used to categorize taxi trips.
-{% enddocs %}
-
-{% docs source_trip_zone %}
-Contains information on the different zones and service zones within each borough.
 {% enddocs %}

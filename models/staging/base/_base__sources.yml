@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: base
+    description: ""
+    schema: base_licences
+    loader: DataFactory
+    tags:
+      - licenses
+    tables:
+      - name: base_license
+        description: ""

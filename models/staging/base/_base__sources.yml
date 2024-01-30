@@ -2,11 +2,11 @@ version: 2
 
 sources:
   - name: base
-    description: ""
+    description: "Car licenses coming from base system."
     schema: base_licences
     loader: DataFactory
     tags:
       - licenses
     tables:
       - name: base_license
-        description: ""
+        description: "{{ doc('source__base__base_license') }}"

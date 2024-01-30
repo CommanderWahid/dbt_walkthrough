@@ -2,37 +2,55 @@ version: 2
 
 models:
   - name: stg_mdm__rate_codes
-    description: "{{ doc('model_stg_mdm__rate_codes') }}"
+    description: "{{ doc('model__stg_mdm__rate_codes') }}"
     columns:
       - name: rate_code_id
-        description: "{{ doc('column_stg_mdm__rate_codes__rate_code_id') }}"
+        description: "{{ doc('column__stg_mdm__rate_code_id') }}"
         tests:
           - not_null
           - unique
+
+      - name: rate_code_description
+        description: "{{ doc('column__stg_mdm__rate_code_description') }}"
 
   - name: stg_mdm__trip_modes
-    description: "{{ doc('model_stg_mdm__trip_modes') }}"
+    description: "{{ doc('model__stg_mdm__trip_modes') }}"
     columns:
       - name: trip_mode_id
-        description: "{{ doc('column_stg_mdm__trip_modes__trip_mode_id') }}"
+        description: "{{ doc('column__stg_mdm__trip_mode_id') }}"
         tests:
           - not_null
           - unique
+
+      - name: trip_mode
+        description: "{{ doc('column__stg_mdm__trip_mode') }}"
 
   - name: stg_mdm__trip_types
-    description: "{{ doc('model_stg_mdm__trip_types') }}"
+    description: "{{ doc('model__stg_mdm__trip_types') }}"
     columns:
       - name: trip_type_id
-        description: "{{ doc('column_stg_mdm__trip_types__trip_type_id') }}"
+        description: "{{ doc('column__stg_mdm__trip_type_id') }}"
         tests:
           - not_null
           - unique
 
+      - name: trip_type
+        description: "{{ doc('column__stg_mdm__trip_type') }}"
+
   - name: stg_mdm__trip_zones
-    description: "{{ doc('model_stg_mdm__trip_zones') }}"
+    description: "{{ doc('model__stg_mdm__trip_zones') }}"
     columns:
       - name: location_id
-        description: "{{ doc('column_stg_mdm__trip_zones__location_id') }}"
+        description: "{{ doc('column__stg_mdm__location_id') }}"
         tests:
           - not_null
           - unique
+
+      - name: borough
+        description: "{{ doc('column__stg_mdm__borough') }}"
+
+      - name: zone
+        description: "{{ doc('column__stg_mdm__zone') }}"
+
+      - name: service_zone
+        description: "{{ doc('column__stg_mdm__service_zone') }}"

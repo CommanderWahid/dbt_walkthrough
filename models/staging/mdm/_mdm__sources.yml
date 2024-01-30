@@ -9,10 +9,10 @@ sources:
       - refs
     tables:
       - name: rate_code
-        description: "{{ doc('source_rate_code') }}"
+        description: "{{ doc('source__rate_code') }}"
       - name: trip_mode
-        description: "{{ doc('source_trip_mode') }}"
+        description: "{{ doc('source__trip_mode') }}"
       - name: trip_type
-        description: "{{ doc('source_trip_type') }}"
+        description: "{{ doc('source__trip_type') }}"
       - name: trip_zone
-        description: "{{ doc('source_trip_zone') }}"
+        description: "{{ doc('source__trip_zone') }}"

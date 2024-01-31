@@ -34,6 +34,9 @@ models:
       - name: trip_month
         description: "{{ doc('column__ax__trip_month') }}"
 
+      - name: etl_loaded_at
+        description: ""
+
   - name: stg_ax__fhv_trip
     description: "{{ doc('model__stg_ax__fhv_trip') }}"
     columns:
@@ -66,4 +69,7 @@ models:
 
       - name: trip_month
         description: "{{ doc('column__ax__trip_month') }}"
+
+      - name: etl_loaded_at
+        description: ""
 

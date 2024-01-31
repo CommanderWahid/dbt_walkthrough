@@ -22,7 +22,8 @@ renamed as (
         triptimemn as trip_time_mn,
         tripmode as trip_mode,
         tripyear as trip_year,
-        tripmonth as trip_month 
+        tripmonth as trip_month,
+        etl_loaded_at 
 
     from source
 

@@ -49,6 +49,9 @@ models:
       - name: trip_month
         description: "{{ doc('column__stg_web__trip_month') }}"
 
+      - name: etl_loaded_at
+        description: ""
+
   - name: stg_web__yellow_trip
     description: "{{ doc('model__stg_web__yellow_trip') }}"
     columns:
@@ -96,4 +99,7 @@ models:
 
       - name: trip_month
         description: "{{ doc('column__stg_web__trip_month') }}"
+
+      - name: etl_loaded_at
+        description: ""
 

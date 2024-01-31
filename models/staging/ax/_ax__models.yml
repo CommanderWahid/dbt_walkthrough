@@ -1,0 +1,69 @@
+version: 2
+
+models:
+  - name: stg_ax__fhv_hv_trip
+    description: "{{ doc('model__stg_ax__fhv_hv_trip') }}"
+    columns:
+      - name: license_number
+        description: "{{ doc('model__stg_base__base_license') }}"
+
+      - name: pickup_date
+        description: "{{ doc('column__ax__pickup_date') }}"
+
+      - name: dropoff_date
+        description: "{{ doc('column__ax__dropoff_date') }}"
+
+      - name: sr_flag
+        description: "{{ doc('column__ax__sr_flag') }}"
+
+      - name: pickup_location_id
+        description: "{{ doc('column__ax__pickup_location_id') }}"
+
+      - name: dropoff_location_id
+        description: "{{ doc('column__ax__dropoff_location_id') }}"
+
+      - name: trip_time_mn
+        description: "{{ doc('column__ax__trip_time_mn') }}"
+
+      - name: trip_mode
+        description: "{{ doc('column__ax__trip_mode') }}"
+
+      - name: trip_year
+        description: "{{ doc('column__ax__trip_year') }}"
+
+      - name: trip_month
+        description: "{{ doc('column__ax__trip_month') }}"
+
+  - name: stg_ax__fhv_trip
+    description: "{{ doc('model__stg_ax__fhv_trip') }}"
+    columns:
+      - name: license_number
+        description: "{{ doc('model__stg_base__base_license') }}"
+
+      - name: pickup_date
+        description: "{{ doc('column__ax__pickup_date') }}"
+
+      - name: dropoff_date
+        description: "{{ doc('column__ax__dropoff_date') }}"
+
+      - name: sr_flag
+        description: "{{ doc('column__ax__sr_flag') }}"
+
+      - name: pickup_location_id
+        description: "{{ doc('column__ax__pickup_location_id') }}"
+
+      - name: dropoff_location_id
+        description: "{{ doc('column__ax__dropoff_location_id') }}"
+
+      - name: trip_time_mn
+        description: "{{ doc('column__ax__trip_time_mn') }}"
+
+      - name: trip_mode
+        description: "{{ doc('column__ax__trip_mode') }}"
+
+      - name: trip_year
+        description: "{{ doc('column__ax__trip_year') }}"
+
+      - name: trip_month
+        description: "{{ doc('column__ax__trip_month') }}"
+

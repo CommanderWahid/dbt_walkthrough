@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: ax
+    description: "Fhv/Hv taxi trip details data."
+    schema: ax_fhv_hv
+    loader: DataFactory
+    tags:
+      - ax
+    tables:
+      - name: fhv_hv_trip
+        description: "{{ doc('source__fhv_hv_trip') }}"
+      - name: fhv_trip
+        description: "{{ doc('source__fhv_trip') }}"

@@ -57,3 +57,15 @@ models:
         +tags: licenses
         +pre-hook:  "{{ log_model_start_event() }}"
         +post-hook: "{{ log_model_end_event() }}"
+
+      web:
+        +enabled: true
+        +tags: web
+        +pre-hook:  "{{ log_model_start_event() }}"
+        +post-hook: "{{ log_model_end_event() }}"
+
+      ax:
+        +enabled: true
+        +tags: ax
+        +pre-hook:  "{{ log_model_start_event() }}"
+        +post-hook: "{{ log_model_end_event() }}"

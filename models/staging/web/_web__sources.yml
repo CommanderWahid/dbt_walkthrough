@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: web
+    description: "Yellow/Green taxi trip details data."
+    schema: web_yellow_green
+    loader: DataFactory
+    tags:
+      - web
+    tables:
+      - name: green_trip
+        description: "{{ doc('source__green_trip') }}"
+      - name: yellow_trip
+        description: "{{ doc('source__yellow_trip') }}"

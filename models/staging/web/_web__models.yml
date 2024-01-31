@@ -1,0 +1,99 @@
+version: 2
+
+models:
+  - name: stg_web__green_trip
+    description: "{{ doc('model__stg_web__green_trip') }}"
+    columns:
+      - name: vendor_id
+        description: "{{ doc('column__stg_web__vendor_id') }}"
+
+      - name: pickup_date
+        description: "{{ doc('column__stg_web__pickup_date') }}"
+
+      - name: dropoff_date
+        description: "{{ doc('column__stg_web__dropoff_date') }}"
+
+      - name: trip_type_id
+        description: "{{ doc('column__stg_mdm__trip_type_id') }}"
+
+      - name: rate_code_id
+        description: "{{ doc('column__stg_mdm__rate_code_id') }}"
+
+      - name: payment_type_id
+        description: "{{ doc('column__stg_wallet__payment_type_id') }}"
+
+      - name: pickup_location_id
+        description: "{{ doc('column__stg_web__pickup_location_id') }}"
+
+      - name: dropoff_location_id
+        description: "{{ doc('column__stg_web__dropoff_location_id') }}"
+
+      - name: passenger_count
+        description: "{{ doc('column__stg_web__passenger_count') }}"
+
+      - name: trip_distance
+        description: "{{ doc('column__stg_web__trip_distance') }}"
+
+      - name: total_amount
+        description: "{{ doc('column__stg_web__total_amount') }}"
+
+      - name: trip_time_mn
+        description: "{{ doc('column__stg_web__trip_time_mn') }}"
+
+      - name: trip_mode
+        description: "{{ doc('column__stg_web__trip_mode') }}"
+
+      - name: trip_year
+        description: "{{ doc('column__stg_web__trip_year') }}"
+
+      - name: trip_month
+        description: "{{ doc('column__stg_web__trip_month') }}"
+
+  - name: stg_web__yellow_trip
+    description: "{{ doc('model__stg_web__yellow_trip') }}"
+    columns:
+      - name: vendor_id
+        description: "{{ doc('column__stg_web__vendor_id') }}"
+
+      - name: pickup_date
+        description: "{{ doc('column__stg_web__pickup_date') }}"
+
+      - name: dropoff_date
+        description: "{{ doc('column__stg_web__dropoff_date') }}"
+
+      - name: trip_type_id
+        description: "{{ doc('column__stg_mdm__trip_type_id') }}"
+
+      - name: rate_code_id
+        description: "{{ doc('column__stg_mdm__rate_code_id') }}"
+
+      - name: payment_type_id
+        description: "{{ doc('column__stg_wallet__payment_type_id') }}"
+
+      - name: pickup_location_id
+        description: "{{ doc('column__stg_web__pickup_location_id') }}"
+
+      - name: dropoff_location_id
+        description: "{{ doc('column__stg_web__dropoff_location_id') }}"
+
+      - name: passenger_count
+        description: "{{ doc('column__stg_web__passenger_count') }}"
+
+      - name: trip_distance
+        description: "{{ doc('column__stg_web__trip_distance') }}"
+
+      - name: total_amount
+        description: "{{ doc('column__stg_web__total_amount') }}"
+
+      - name: trip_time_mn
+        description: "{{ doc('column__stg_web__trip_time_mn') }}"
+
+      - name: trip_mode
+        description: "{{ doc('column__stg_web__trip_mode') }}"
+
+      - name: trip_year
+        description: "{{ doc('column__stg_web__trip_year') }}"
+
+      - name: trip_month
+        description: "{{ doc('column__stg_web__trip_month') }}"
+

@@ -7,8 +7,19 @@ sources:
     loader: DataFactory
     tags:
       - ax
+      
     tables:
       - name: fhv_hv_trip
         description: "{{ doc('source__fhv_hv_trip') }}"
+        freshness:
+          warn_after: {count: 8, period: hour}
+          error_after: {count: 16, period: hour}
+        loaded_at_field: etl_loaded_at
+
       - name: fhv_trip
         description: "{{ doc('source__fhv_trip') }}"
+        freshness:
+          warn_after: {count: 30, period: minute}
+          error_after: {count: 90, period: minute}
+          filter: date_diff(hour, etl_loaded_at, current_timestamp) < 2
+        loaded_at_field: etl_loaded_at

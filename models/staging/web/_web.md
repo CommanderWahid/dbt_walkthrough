@@ -65,6 +65,6 @@ The unique identifier for each dropoff location.
 
 {% enddocs %}
 
-{% docs column__stg_web__ %}
+{% docs column__stg_web__etl_loaded_at %}
 
 {% enddocs %}

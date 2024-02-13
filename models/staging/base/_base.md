@@ -59,3 +59,7 @@ The unique identifier for each license.
 {% docs column__stg_base__geolocation_location %}
 
 {% enddocs %}
+
+{% docs column__stg_base__updated_at %}
+
+{% enddocs %}

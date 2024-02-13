@@ -20,7 +20,8 @@ renamed as (
         addresspostcode as address_post_code,
         geolocationlatitude as geolocation_latitude,
         geolocationlongitude as geolocation_longitude,
-        geolocationlocation as geolocation_location
+        geolocationlocation as geolocation_location,
+        updated_at
 
     from source
 

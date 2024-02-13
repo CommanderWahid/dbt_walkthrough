@@ -52,6 +52,6 @@ The unique identifier for each dropoff location.
 
 {% enddocs %}
 
-{% docs column__ax__ %}
+{% docs column__ax__etl_loaded_at %}
 
 {% enddocs %}

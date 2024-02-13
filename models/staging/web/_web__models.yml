@@ -50,7 +50,7 @@ models:
         description: "{{ doc('column__stg_web__trip_month') }}"
 
       - name: etl_loaded_at
-        description: ""
+        description: "{{ doc('column__stg_web__etl_loaded_at') }}"
 
   - name: stg_web__yellow_trip
     description: "{{ doc('model__stg_web__yellow_trip') }}"
@@ -101,5 +101,5 @@ models:
         description: "{{ doc('column__stg_web__trip_month') }}"
 
       - name: etl_loaded_at
-        description: ""
+        description: "{{ doc('column__stg_web__etl_loaded_at') }}"
 

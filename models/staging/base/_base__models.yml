@@ -46,3 +46,6 @@ models:
       - name: geolocation_location
         description: "{{ doc('column__stg_base__geolocation_location') }}"
 
+      - name: updated_at   
+        description: "{{ doc('column__stg_base__updated_at') }}"
+

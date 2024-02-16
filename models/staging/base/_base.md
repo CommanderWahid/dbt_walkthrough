@@ -1,4 +1,4 @@
-{% docs source__base__base_license %}
+{% docs source__base_base_license %}
 Contains information about car licenses.
 {% enddocs %}
 
@@ -8,7 +8,7 @@ Licenses data with basic cleaning and transformation applied, one row per car li
 {% enddocs %}
 
 
-{% docs column__stg_base__base_license_number %}
+{% docs column__stg_base__license_number %}
 The unique identifier for each license.
 {% enddocs %}
 

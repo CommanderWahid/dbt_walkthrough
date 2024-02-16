@@ -8,7 +8,7 @@ with source as (
 renamed as (
 
     select
-        baselicensenumber as base_license_number,
+        baselicensenumber as license_number,
         entityname as entity_name,
         telephonenumber as telephone_number,
         shlendorsed as shl_endorsed,

@@ -4,8 +4,8 @@ models:
   - name: stg_base__base_license
     description: "{{ doc('model__stg_base__base_license') }}"
     columns:
-      - name: base_license_number
-        description: "{{ doc('column__stg_base__base_license_number') }}"
+      - name: license_number
+        description: "{{ doc('column__stg_base__license_number') }}"
         tests:
           - not_null
           - unique

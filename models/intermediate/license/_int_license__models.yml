@@ -4,11 +4,22 @@ models:
   - name: int_base_license__fhv_last_activities
     columns:
       - name: license_number
-      - name: last_dropOff_date
-      - name: last_dropoff_location
+        description: unique key
+        tests:
+          - not_null
+          - unique
 
   - name: int_base_license__fhv_hv_last_activities
     columns:
       - name: license_number
-      - name: last_dropOff_date
-      - name: last_dropoff_location
+        description: unique key
+        tests:
+          - not_null
+          - unique
+
+  - name: int_base_license__snapshot
+    columns:
+      - name: base_license_number
+        description: business key
+        tests:
+          - not_null

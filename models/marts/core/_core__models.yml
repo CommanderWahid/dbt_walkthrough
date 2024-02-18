@@ -43,10 +43,22 @@ models:
       - name: geolocation_location
         description: ""
 
-      - name: last_dropoff_date
+      - name: fhv_last_dropoff_date
         description: ""
 
-      - name: last_dropoff_location
+      - name: fhv_last_dropoff_location
+        description: ""
+
+      - name: fhv_hv_last_dropoff_date
+        description: ""
+
+      - name: fhv_hv_last_dropoff_location
+        description: ""
+
+      - name: is_current_version
+        description: ""
+
+      - name: version_num
         description: ""
 
   - name: dim_rate_codes

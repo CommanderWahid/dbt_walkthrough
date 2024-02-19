@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: fct_hv_trips
+    description: ""
+    columns:
+      - name: license_number
+        description: ""
+
+      - name: pickup_date
+        description: ""
+
+      - name: dropoff_date
+        description: ""
+
+      - name: sr_flag
+        description: ""
+
+      - name: pickup_location_id
+        description: ""
+
+      - name: dropoff_location_id
+        description: ""
+
+      - name: trip_time_mn
+        description: ""
+
+      - name: trip_mode
+        description: ""
+
+      - name: trip_year
+        description: ""
+
+      - name: trip_month
+        description: ""
+
+      - name: etl_loaded_at
+        description: ""
+

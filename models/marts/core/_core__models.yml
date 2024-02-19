@@ -55,6 +55,12 @@ models:
       - name: fhv_hv_last_dropoff_location
         description: ""
 
+      - name: dbt_valid_from
+        description: ""
+
+      - name: dbt_valid_to
+        description: ""
+
       - name: is_current_version
         description: ""
 

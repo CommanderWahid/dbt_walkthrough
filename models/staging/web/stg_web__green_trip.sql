@@ -23,11 +23,16 @@ renamed as (
         tripmode as trip_mode,
         tripyear as trip_year,
         tripmonth as trip_month,
-        etl_loaded_at 
+        etl_loaded_at,
+        row_number() over(
+            partition by vendorid,pickupdate,dropoffdate,triptypeid,ratecodeid,
+                         paymenttypeid,pickuplocationid,dropofflocationid
+            order by  pickupdate desc
+        ) as row_num
 
     from source
 
 )
 
-select * from renamed
-
+select * 
+from renamed

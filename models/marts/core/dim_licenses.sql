@@ -1,3 +1,12 @@
+{{
+   config(
+    tblproperties={
+            'delta.feature.allowColumnDefaults':'supported'
+        }
+   )
+}}
+
+
 with snapshot_licenses  as (
     
     select * from {{ ref('int_base_license__snapshot') }}
@@ -33,6 +42,8 @@ licenses as (
         int_fhv.last_dropoff_location     as fhv_last_dropoff_location,
         int_fhv_hv.last_dropoff_date      as fhv_hv_last_dropoff_date,
         int_fhv_hv.last_dropoff_location  as fhv_hv_last_dropoff_location,
+        snp.dbt_valid_from,
+        snp.dbt_valid_to,
         snp.is_current_version,
         snp.version_num
     from snapshot_licenses snp 

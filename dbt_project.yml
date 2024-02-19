@@ -71,13 +71,44 @@ models:
         +post-hook: "{{ log_model_end_event() }}"
 
     intermediate:
-      +materialized: ephemeral
+        +materialized: ephemeral
+        +enabled: true
+        +tags: inter
 
     marts:
-      +materialized: table
-
+      +file_format: delta
+      
       core:
+        +materialized: table
         +enabled: true
         +tags: dims
+        +pre-hook:  "{{ log_model_start_event() }}"
+        +post-hook: "{{ log_model_end_event() }}"
+      
+      fhv_trips:
+        +materialized: incremental
+        +enabled: true
+        +tags: facts
+        +pre-hook:  "{{ log_model_start_event() }}"
+        +post-hook: "{{ log_model_end_event() }}"
+
+      high_volume_trips:
+        +materialized: incremental
+        +enabled: true
+        +tags: facts
+        +pre-hook:  "{{ log_model_start_event() }}"
+        +post-hook: "{{ log_model_end_event() }}"
+
+      green_trips:
+        +materialized: incremental
+        +enabled: true
+        +tags: facts
+        +pre-hook:  "{{ log_model_start_event() }}"
+        +post-hook: "{{ log_model_end_event() }}"
+
+      yellow_trips:
+        +materialized: incremental
+        +enabled: true
+        +tags: facts
         +pre-hook:  "{{ log_model_start_event() }}"
         +post-hook: "{{ log_model_end_event() }}"

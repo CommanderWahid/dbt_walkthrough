@@ -14,7 +14,7 @@ sources:
     loaded_at_field: etl_loaded_at
 
     tables:
-      - name: green_trip
-        description: "{{ doc('source__green_trip') }}"
-      - name: yellow_trip
-        description: "{{ doc('source__yellow_trip') }}"
+      - name: green_trips
+        description: "{{ doc('source__green_trips') }}"
+      - name: yellow_trips
+        description: "{{ doc('source__yellow_trips') }}"

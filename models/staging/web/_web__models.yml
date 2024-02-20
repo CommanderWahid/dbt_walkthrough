@@ -14,19 +14,31 @@ models:
         description: "{{ doc('column__stg_web__dropoff_date') }}"
 
       - name: trip_type_id
-        description: "{{ doc('column__stg_mdm__trip_type_id') }}"
+        description: "{{ doc('column__stg_mdm__trip_type') }}"
 
       - name: rate_code_id
-        description: "{{ doc('column__stg_mdm__rate_code_id') }}"
+        description: "{{ doc('column__stg_mdm__rate_code_description') }}"
 
       - name: payment_type_id
-        description: "{{ doc('column__stg_wallet__payment_type_id') }}"
+        description: "{{ doc('column__stg_wallet__payment_description') }}"
 
-      - name: pickup_location_id
-        description: "{{ doc('column__stg_web__pickup_location_id') }}"
+      - name: pickup_borough
+        description: "{{ doc('column__stg_web__pickup_borough') }}"
 
-      - name: dropoff_location_id
-        description: "{{ doc('column__stg_web__dropoff_location_id') }}"
+      - name: pickup_zone
+        description: "{{ doc('column__stg_web__pickup_zone') }}"
+
+      - name: pickup_service_zone
+        description: "{{ doc('column__stg_web__pickup_service_zone') }}"
+
+      - name: dropOff_borough
+        description: "{{ doc('column__stg_web__dropOff_borough') }}"
+
+      - name: dropOff_zone
+        description: "{{ doc('column__stg_web__dropOff_zone') }}"
+
+      - name: dropOff_service_zone
+        description: "{{ doc('column__stg_web__dropOff_service_zone') }}"
 
       - name: passenger_count
         description: "{{ doc('column__stg_web__passenger_count') }}"
@@ -68,19 +80,31 @@ models:
         description: "{{ doc('column__stg_web__dropoff_date') }}"
 
       - name: trip_type_id
-        description: "{{ doc('column__stg_mdm__trip_type_id') }}"
+        description: "{{ doc('column__stg_mdm__trip_type') }}"
 
       - name: rate_code_id
-        description: "{{ doc('column__stg_mdm__rate_code_id') }}"
+        description: "{{ doc('column__stg_mdm__rate_code_description') }}"
 
       - name: payment_type_id
-        description: "{{ doc('column__stg_wallet__payment_type_id') }}"
+        description: "{{ doc('column__stg_wallet__payment_description') }}"
 
-      - name: pickup_location_id
-        description: "{{ doc('column__stg_web__pickup_location_id') }}"
+      - name: pickup_borough
+        description: "{{ doc('column__stg_web__pickup_borough') }}"
 
-      - name: dropoff_location_id
-        description: "{{ doc('column__stg_web__dropoff_location_id') }}"
+      - name: pickup_zone
+        description: "{{ doc('column__stg_web__pickup_zone') }}"
+
+      - name: pickup_service_zone
+        description: "{{ doc('column__stg_web__pickup_service_zone') }}"
+
+      - name: dropOff_borough
+        description: "{{ doc('column__stg_web__dropOff_borough') }}"
+
+      - name: dropOff_zone
+        description: "{{ doc('column__stg_web__dropOff_zone') }}"
+
+      - name: dropOff_service_zone
+        description: "{{ doc('column__stg_web__dropOff_service_zone') }}"
 
       - name: passenger_count
         description: "{{ doc('column__stg_web__passenger_count') }}"

@@ -1,8 +1,8 @@
-{% docs source__yellow_trip %} 
+{% docs source__yellow_trips %} 
 Contains information about yellow trip taxi data details.
 {% enddocs %}
 
-{% docs source__green_trip %} 
+{% docs source__green_trips %} 
 Contains information about green trip taxi data details.
 {% enddocs %}
 
@@ -28,13 +28,28 @@ The unique identifier for each vendor.
 
 {% enddocs %}
 
+{% docs column__stg_web__pickup_borough %}
 
-{% docs column__stg_web__pickup_location_id %}
-The unique identifier for each pickup location.
 {% enddocs %}
 
-{% docs column__stg_web__dropoff_location_id %}
-The unique identifier for each dropoff location.
+{% docs column__stg_web__pickup_zone %}
+
+{% enddocs %}
+
+{% docs column__stg_web__pickup_service_zone %}
+
+{% enddocs %}
+
+{% docs column__stg_web__dropOff_borough %}
+
+{% enddocs %}
+
+{% docs column__stg_web__dropOff_zone %}
+
+{% enddocs %}
+
+{% docs column__stg_web__dropOff_service_zone %}
+
 {% enddocs %}
 
 {% docs column__stg_web__passenger_count %}

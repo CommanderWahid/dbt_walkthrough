@@ -97,6 +97,15 @@ models:
       - name: trip_type
         description: ""
 
+  - name: dim_payment_types
+    description: ""
+    columns:
+      - name: payment_type_id
+        description: ""
+
+      - name: payment_type
+        description: ""
+
   - name: dim_trip_zones
     description: ""
     columns:

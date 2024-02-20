@@ -4,6 +4,9 @@ models:
   - name: dim_licenses
     description: ""
     columns:
+      - name: license_id
+        description: ""
+
       - name: license_number
         description: ""
 
@@ -73,7 +76,7 @@ models:
       - name: rate_code_id
         description: ""
 
-      - name: rate_code_description
+      - name: rate_code
         description: ""
 
   - name: dim_trip_modes

@@ -1,7 +1,7 @@
 
 with source as (
 
-    select * from {{ source('ax', 'fhv_trip') }}
+    select * from {{ source('ax', 'fhv_trips') }}
 
 ),
 
@@ -12,8 +12,12 @@ renamed as (
         pickupdate as pickup_date,
         dropoffdate as dropoff_date,
         sr_flag,
-        pickuplocationid as pickup_location_id,
-        dropofflocationid as dropoff_location_id,
+        PickupBorough as pickup_borough,
+        PickupZone as pickup_zone,
+        PickupServiceZone as pickup_service_zone,
+        DropOffBorough as dropOff_borough,
+        DropOffZone as dropOff_zone,
+        DropOffServiceZone as dropOff_service_zone,
         triptimemn as trip_time_mn,
         tripmode as trip_mode,
         tripyear as trip_year,

@@ -4,5 +4,5 @@ with rate_codes as (
 )
 
 select rate_code_id, 
-       rate_code_description
+       rate_code_description as rate_code
 from rate_codes

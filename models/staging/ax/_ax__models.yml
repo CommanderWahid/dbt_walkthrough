@@ -16,11 +16,23 @@ models:
       - name: sr_flag
         description: "{{ doc('column__ax__sr_flag') }}"
 
-      - name: pickup_location_id
-        description: "{{ doc('column__ax__pickup_location_id') }}"
+      - name: pickup_borough
+        description: "{{ doc('column__ax__pickup_borough') }}"
 
-      - name: dropoff_location_id
-        description: "{{ doc('column__ax__dropoff_location_id') }}"
+      - name: pickup_zone
+        description: "{{ doc('column__ax__pickup_zone') }}"
+
+      - name: pickup_service_zone
+        description: "{{ doc('column__ax__pickup_service_zone') }}"
+
+      - name: dropOff_borough
+        description: "{{ doc('column__ax__dropOff_borough') }}"
+
+      - name: dropOff_zone
+        description: "{{ doc('column__ax__dropOff_zone') }}"
+
+      - name: dropOff_service_zone
+        description: "{{ doc('column__ax__dropOff_service_zone') }}"
 
       - name: trip_time_mn
         description: "{{ doc('column__ax__trip_time_mn') }}"
@@ -52,11 +64,23 @@ models:
       - name: sr_flag
         description: "{{ doc('column__ax__sr_flag') }}"
 
-      - name: pickup_location_id
-        description: "{{ doc('column__ax__pickup_location_id') }}"
+      - name: pickup_borough
+        description: "{{ doc('column__ax__pickup_borough') }}"
 
-      - name: dropoff_location_id
-        description: "{{ doc('column__ax__dropoff_location_id') }}"
+      - name: pickup_zone
+        description: "{{ doc('column__ax__pickup_zone') }}"
+
+      - name: pickup_service_zone
+        description: "{{ doc('column__ax__pickup_service_zone') }}"
+
+      - name: dropOff_borough
+        description: "{{ doc('column__ax__dropOff_borough') }}"
+
+      - name: dropOff_zone
+        description: "{{ doc('column__ax__dropOff_zone') }}"
+
+      - name: dropOff_service_zone
+        description: "{{ doc('column__ax__dropOff_service_zone') }}"
 
       - name: trip_time_mn
         description: "{{ doc('column__ax__trip_time_mn') }}"

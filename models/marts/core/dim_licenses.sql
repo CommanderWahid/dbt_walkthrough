@@ -24,7 +24,8 @@ int_fhv_hv_licenses as (
 
 licenses as (
 
-    select  
+    select
+        snp.dbt_scd_id as license_id,  
         snp.base_license_number as license_number,
         snp.entity_name,
         snp.telephone_number,

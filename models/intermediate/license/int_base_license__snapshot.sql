@@ -1,6 +1,6 @@
 with snapshot_licenses  as (
     
-    select {{ dbt_utils.star(from=ref('licenses_snapshot'), except=['updated_at', 'dbt_scd_id','dbt_updated_at']) }}
+    select {{ dbt_utils.star(from=ref('licenses_snapshot'), except=['updated_at','dbt_updated_at']) }}
     from {{ ref('licenses_snapshot') }}
 ),
 

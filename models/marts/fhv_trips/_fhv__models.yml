@@ -4,7 +4,7 @@ models:
   - name: fct_fhv_trips
     description: ""
     columns:
-      - name: license_number
+      - name: license_id
         description: ""
 
       - name: pickup_date
@@ -25,7 +25,7 @@ models:
       - name: trip_time_mn
         description: ""
 
-      - name: trip_mode
+      - name: trip_mode_id
         description: ""
 
       - name: trip_year

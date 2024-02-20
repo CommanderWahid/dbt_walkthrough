@@ -40,7 +40,7 @@ models:
       - name: trip_time_mn
         description: ""
 
-      - name: trip_mode
+      - name: trip_mode_id
         description: ""
 
       - name: trip_year

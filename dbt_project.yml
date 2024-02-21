@@ -19,19 +19,96 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
+# Define variables here
+vars:
+  audit_schema_name: audit_logs
+  audit_table_name: logs
+
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
+on-run-start: 
+  - "{{ setup_audit_log() }}"
+  - "{{ create_udfs() }}"
+  - "{{ log_project_start_event() }}"
 
-# Configuring models
-# Full documentation: https://docs.getdbt.com/docs/configuring-models
+on-run-end: "{{ log_project_end_event() }}"
 
-# In this example config, we tell dbt to build all models in the example/
-# directory as views. These settings can be overridden in the individual model
-# files using the `{{ config(...) }}` macro.
 models:
   dbt_walkthrough:
-    # Config indicated by + and applies to all files under models/example/
-    example:
+    staging:
       +materialized: view
+
+      mdm:
+        +enabled: true
+        +tags: refs
+        +pre-hook:  "{{ log_model_start_event() }}"
+        +post-hook: "{{ log_model_end_event() }}"
+      
+      wallet:
+        +enabled: true
+        +tags: payments
+        +pre-hook:  "{{ log_model_start_event() }}"
+        +post-hook: "{{ log_model_end_event() }}"
+      
+      base:
+        +enabled: true
+        +tags: licenses
+        +pre-hook:  "{{ log_model_start_event() }}"
+        +post-hook: "{{ log_model_end_event() }}"
+
+      web:
+        +enabled: true
+        +tags: web
+        +pre-hook:  "{{ log_model_start_event() }}"
+        +post-hook: "{{ log_model_end_event() }}"
+
+      ax:
+        +enabled: true
+        +tags: ax
+        +pre-hook:  "{{ log_model_start_event() }}"
+        +post-hook: "{{ log_model_end_event() }}"
+
+    intermediate:
+        +materialized: ephemeral
+        +enabled: true
+        +tags: inter
+
+    marts:
+      +file_format: delta
+      
+      core:
+        +materialized: table
+        +enabled: true
+        +tags: dims
+        +pre-hook:  "{{ log_model_start_event() }}"
+        +post-hook: "{{ log_model_end_event() }}"
+      
+      fhv_trips:
+        +materialized: incremental
+        +enabled: true
+        +tags: facts
+        +pre-hook:  "{{ log_model_start_event() }}"
+        +post-hook: "{{ log_model_end_event() }}"
+
+      high_volume_trips:
+        +materialized: incremental
+        +enabled: true
+        +tags: facts
+        +pre-hook:  "{{ log_model_start_event() }}"
+        +post-hook: "{{ log_model_end_event() }}"
+
+      green_trips:
+        +materialized: incremental
+        +enabled: true
+        +tags: facts
+        +pre-hook:  "{{ log_model_start_event() }}"
+        +post-hook: "{{ log_model_end_event() }}"
+
+      yellow_trips:
+        +materialized: incremental
+        +enabled: true
+        +tags: facts
+        +pre-hook:  "{{ log_model_start_event() }}"
+        +post-hook: "{{ log_model_end_event() }}"

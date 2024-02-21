@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: stg_base__base_license
+    description: "{{ doc('model__stg_base__base_license') }}"
+    columns:
+      - name: license_number
+        description: "{{ doc('column__stg_base__license_number') }}"
+        tests:
+          - not_null
+          - unique
+
+      - name: entity_name
+        description: "{{ doc('column__stg_base__entity_name') }}"
+
+      - name: telephone_number
+        description: "{{ doc('column__stg_base__telephone_number') }}"
+
+      - name: shl_endorsed
+        description: "{{ doc('column__stg_base__shl_endorsed') }}"
+
+      - name: base_type
+        description: "{{ doc('column__stg_base__base_type') }}"
+
+      - name: address_building
+        description: "{{ doc('column__stg_base__address_building') }}"
+
+      - name: address_street
+        description: "{{ doc('column__stg_base__address_street') }}"
+
+      - name: address_city
+        description: "{{ doc('column__stg_base__address_city') }}"
+
+      - name: address_state
+        description: "{{ doc('column__stg_base__address_state') }}"
+
+      - name: address_post_code
+        description: "{{ doc('column__stg_base__address_post_code') }}"
+
+      - name: geolocation_latitude
+        description: "{{ doc('column__stg_base__geolocation_latitude') }}"
+
+      - name: geolocation_longitude
+        description: "{{ doc('column__stg_base__geolocation_longitude') }}"
+
+      - name: geolocation_location
+        description: "{{ doc('column__stg_base__geolocation_location') }}"
+
+      - name: updated_at   
+        description: "{{ doc('column__stg_base__updated_at') }}"
+

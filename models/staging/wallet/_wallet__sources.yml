@@ -1,0 +1,12 @@
+version: 2 
+
+sources:
+  - name: wallet
+    schema: wallet_payments
+    description: "Taxi trip payments data."
+    loader: DataFactory
+    tags:
+      - payments
+    tables:
+      - name: payment_type
+        description: "{{ doc('source__payment_type') }}"

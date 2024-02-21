@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: fct_yellow_trips
+    description: ""
+    columns:
+      - name: vendor_id
+        description: ""
+
+      - name: pickup_date
+        description: ""
+
+      - name: dropoff_date
+        description: ""
+
+      - name: trip_type_id
+        description: ""
+
+      - name: rate_code_id
+        description: ""
+
+      - name: payment_type_id
+        description: ""
+
+      - name: pickup_location_id
+        description: ""
+
+      - name: dropoff_location_id
+        description: ""
+
+      - name: passenger_count
+        description: ""
+
+      - name: trip_distance
+        description: ""
+
+      - name: total_amount
+        description: ""
+
+      - name: trip_time_mn
+        description: ""
+
+      - name: trip_mode_id
+        description: ""
+
+      - name: trip_year
+        description: ""
+
+      - name: trip_month
+        description: ""
+
+      - name: etl_loaded_at
+        description: ""
+

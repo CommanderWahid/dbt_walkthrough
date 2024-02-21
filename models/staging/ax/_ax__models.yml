@@ -1,0 +1,99 @@
+version: 2
+
+models:
+  - name: stg_ax__fhv_hv_trip
+    description: "{{ doc('model__stg_ax__fhv_hv_trip') }}"
+    columns:
+      - name: license_number
+        description: "{{ doc('model__stg_base__base_license') }}"
+
+      - name: pickup_date
+        description: "{{ doc('column__ax__pickup_date') }}"
+
+      - name: dropoff_date
+        description: "{{ doc('column__ax__dropoff_date') }}"
+
+      - name: sr_flag
+        description: "{{ doc('column__ax__sr_flag') }}"
+
+      - name: pickup_borough
+        description: "{{ doc('column__ax__pickup_borough') }}"
+
+      - name: pickup_zone
+        description: "{{ doc('column__ax__pickup_zone') }}"
+
+      - name: pickup_service_zone
+        description: "{{ doc('column__ax__pickup_service_zone') }}"
+
+      - name: dropOff_borough
+        description: "{{ doc('column__ax__dropOff_borough') }}"
+
+      - name: dropOff_zone
+        description: "{{ doc('column__ax__dropOff_zone') }}"
+
+      - name: dropOff_service_zone
+        description: "{{ doc('column__ax__dropOff_service_zone') }}"
+
+      - name: trip_time_mn
+        description: "{{ doc('column__ax__trip_time_mn') }}"
+
+      - name: trip_mode
+        description: "{{ doc('column__ax__trip_mode') }}"
+
+      - name: trip_year
+        description: "{{ doc('column__ax__trip_year') }}"
+
+      - name: trip_month
+        description: "{{ doc('column__ax__trip_month') }}"
+
+      - name: etl_loaded_at
+        description: "{{ doc('column__ax__etl_loaded_at') }}"
+
+  - name: stg_ax__fhv_trip
+    description: "{{ doc('model__stg_ax__fhv_trip') }}"
+    columns:
+      - name: license_number
+        description: "{{ doc('model__stg_base__base_license') }}"
+
+      - name: pickup_date
+        description: "{{ doc('column__ax__pickup_date') }}"
+
+      - name: dropoff_date
+        description: "{{ doc('column__ax__dropoff_date') }}"
+
+      - name: sr_flag
+        description: "{{ doc('column__ax__sr_flag') }}"
+
+      - name: pickup_borough
+        description: "{{ doc('column__ax__pickup_borough') }}"
+
+      - name: pickup_zone
+        description: "{{ doc('column__ax__pickup_zone') }}"
+
+      - name: pickup_service_zone
+        description: "{{ doc('column__ax__pickup_service_zone') }}"
+
+      - name: dropOff_borough
+        description: "{{ doc('column__ax__dropOff_borough') }}"
+
+      - name: dropOff_zone
+        description: "{{ doc('column__ax__dropOff_zone') }}"
+
+      - name: dropOff_service_zone
+        description: "{{ doc('column__ax__dropOff_service_zone') }}"
+
+      - name: trip_time_mn
+        description: "{{ doc('column__ax__trip_time_mn') }}"
+
+      - name: trip_mode
+        description: "{{ doc('column__ax__trip_mode') }}"
+
+      - name: trip_year
+        description: "{{ doc('column__ax__trip_year') }}"
+
+      - name: trip_month
+        description: "{{ doc('column__ax__trip_month') }}"
+
+      - name: etl_loaded_at
+        description: "{{ doc('column__ax__etl_loaded_at') }}"
+

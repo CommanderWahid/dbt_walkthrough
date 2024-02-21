@@ -1,0 +1,11 @@
+ dbt_walkthrough:
+   target: databricks_dev
+   outputs:
+     databricks_dev:
+      type: databricks
+      method: http
+      catalog: dbt_demo_taxi_trip
+      schema:  gold_taxi_trip
+      host: "{{ env_var('DBT_HOST') }}"
+      http_path: "{{ env_var('DBT_HTTP_PATH') }}"
+      token: "{{ env_var('DBT_ACCESS_TOKEN') }}"

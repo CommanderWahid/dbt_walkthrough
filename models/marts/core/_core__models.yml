@@ -1,0 +1,123 @@
+version: 2
+
+models:
+  - name: dim_licenses
+    description: ""
+    columns:
+      - name: license_id
+        description: ""
+
+      - name: license_number
+        description: ""
+
+      - name: entity_name
+        description: ""
+
+      - name: telephone_number
+        description: ""
+
+      - name: shl_endorsed
+        description: ""
+
+      - name: base_type
+        description: ""
+
+      - name: address_building
+        description: ""
+
+      - name: address_street
+        description: ""
+
+      - name: address_city
+        description: ""
+
+      - name: address_state
+        description: ""
+
+      - name: address_post_code
+        description: ""
+
+      - name: geolocation_latitude
+        description: ""
+
+      - name: geolocation_longitude
+        description: ""
+
+      - name: geolocation_location
+        description: ""
+
+      - name: fhv_last_dropoff_date
+        description: ""
+
+      - name: fhv_last_dropoff_location
+        description: ""
+
+      - name: fhv_hv_last_dropoff_date
+        description: ""
+
+      - name: fhv_hv_last_dropoff_location
+        description: ""
+
+      - name: dbt_valid_from
+        description: ""
+
+      - name: dbt_valid_to
+        description: ""
+
+      - name: is_current_version
+        description: ""
+
+      - name: version_num
+        description: ""
+
+  - name: dim_rate_codes
+    description: ""
+    columns:
+      - name: rate_code_id
+        description: ""
+
+      - name: rate_code
+        description: ""
+
+  - name: dim_trip_modes
+    description: ""
+    columns:
+      - name: trip_mode_id
+        description: ""
+
+      - name: trip_mode
+        description: ""
+
+  - name: dim_trip_types
+    description: ""
+    columns:
+      - name: trip_type_id
+        description: ""
+
+      - name: trip_type
+        description: ""
+
+  - name: dim_payment_types
+    description: ""
+    columns:
+      - name: payment_type_id
+        description: ""
+
+      - name: payment_type
+        description: ""
+
+  - name: dim_trip_zones
+    description: ""
+    columns:
+      - name: location_id
+        description: ""
+
+      - name: borough
+        description: ""
+
+      - name: zone
+        description: ""
+
+      - name: service_zone
+        description: ""
+

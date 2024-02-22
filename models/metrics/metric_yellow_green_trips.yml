@@ -7,7 +7,7 @@ semantic_models:
     model: ref('rpt_yellow_green_trip_details')
 
     entities:
-      - name: trip_id
+      - name: green_yellow_trip_id
         type: primary
         expr: cast(1 as int)
     
@@ -56,20 +56,20 @@ metrics:
   - name: total_amount
     description: The total amount.
     type: simple
-    label: Total Amount
+    label: Total Amount (yellow/green)
     type_params:
       measure: total_amount
 
-  - name: trip_count
+  - name: trip_count_yellow_green
     description: The trip count.
     type: simple
-    label: Trip Count
+    label: Trip Count (yellow/green)
     type_params:
       measure: trip_count
 
   - name: passenger_count
     description: The passenger count.
     type: simple
-    label: Passenger Count
+    label: Passenger Count (yellow/green)
     type_params:
       measure: passenger_count

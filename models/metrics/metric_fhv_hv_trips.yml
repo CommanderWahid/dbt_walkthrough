@@ -1,0 +1,57 @@
+semantic_models:
+  - name: fhv_hv_trips
+    description: |
+      Model containing fhv and hv taxi trip data.
+    defaults:
+      agg_time_dimension: pickup_date
+    model: ref('rpt_fhv_hv_trip_details')
+
+    entities:
+      - name: fhv_hv_trip_id
+        type: primary
+        expr: cast(1 as int)
+    
+    dimensions:
+      - name: pickup_date
+        expr: to_date(pickup_date, 'yyyy-MM-dd')
+        type: time
+        type_params:
+          time_granularity: day
+
+      - name: sr_flag
+        type: categorical
+
+      - name: trip_mode
+        type: categorical
+
+      - name: pickup_location
+        type: categorical
+
+      - name: dropoff_location
+        type: categorical
+        
+
+    measures:
+      - name: trip_count_fhv_hv
+        agg: sum
+        expr: 1
+
+      - name: trip_time_mn
+        description: The trip time is calculated as a sum of trip_time_mn associated with each trip.
+        agg: sum
+        expr: trip_time_mn
+    
+metrics:
+  - name: trip_duration
+    description: Trip duration for fhv/hv data.
+    type: simple
+    label: Trip Duration (fhv/hv)
+    type_params:
+      measure: trip_time_mn
+
+  - name: trip_count_fhv_hv
+    description: Trip count for fhv/hv data.
+    type: simple
+    label: Trip Count (fhv/hv)
+    type_params:
+      measure: trip_count_fhv_hv

@@ -1,0 +1,75 @@
+semantic_models:
+  - name: yellow_green_trips
+    description: |
+      Model containing yellow and green taxi trip data.
+    defaults:
+      agg_time_dimension: pickup_date
+    model: ref('rpt_yellow_green_trip_details')
+
+    entities:
+      - name: green_yellow_trip_id
+        type: primary
+        expr: cast(1 as int)
+    
+    dimensions:
+      - name: pickup_date
+        expr: to_date(pickup_date, 'yyyy-MM-dd')
+        type: time
+        type_params:
+          time_granularity: day
+
+      - name: trip_type
+        type: categorical
+
+      - name: rate_code
+        type: categorical
+
+      - name: trip_mode
+        type: categorical
+
+      - name: payment_type
+        type: categorical
+
+      - name: pickup_location
+        type: categorical
+
+      - name: dropoff_location
+        type: categorical
+        
+
+    measures:
+      - name: total_amount
+        description: The total amount is calculated as a sum of total_amount associated with each trip.
+        agg: sum
+        expr: total_amount
+      
+      - name: trip_count
+        agg: sum
+        expr: 1
+
+      - name: passenger_count
+        description: The passenger count is calculated as a sum of passenger_count associated with each trip.
+        agg: sum
+        expr: passenger_count
+    
+metrics:
+  - name: total_amount
+    description: The total amount.
+    type: simple
+    label: Total Amount (yellow/green)
+    type_params:
+      measure: total_amount
+
+  - name: trip_count_yellow_green
+    description: The trip count.
+    type: simple
+    label: Trip Count (yellow/green)
+    type_params:
+      measure: trip_count
+
+  - name: passenger_count
+    description: The passenger count.
+    type: simple
+    label: Passenger Count (yellow/green)
+    type_params:
+      measure: passenger_count

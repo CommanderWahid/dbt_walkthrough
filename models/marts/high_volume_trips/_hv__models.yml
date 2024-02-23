@@ -18,15 +18,39 @@ models:
 
       - name: pickup_location_id
         description: ""
+        tests:
+          - relationships:
+              to: ref('dim_trip_zones')
+              field: location_id
+              config:
+                severity: error
+                error_if: ">10"
+                warn_if: ">=1"   
 
       - name: dropoff_location_id
         description: ""
+        tests:
+          - relationships:
+              to: ref('dim_trip_zones')
+              field: location_id
+              config:
+                severity: error
+                error_if: ">10"
+                warn_if: ">=1"   
 
       - name: trip_time_mn
         description: ""
 
-      - name: trip_mode
+      - name: trip_mode_id
         description: ""
+        tests:
+          - relationships:
+              to: ref('dim_trip_modes')
+              field: trip_mode_id
+              config:
+                severity: error
+                error_if: ">10"
+                warn_if: ">=1"   
 
       - name: trip_year
         description: ""

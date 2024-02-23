@@ -6,9 +6,6 @@ models:
     columns:
       - name: payment_type_id
         description: "{{ doc('column__stg_wallet__payment_type_id') }}"
-        tests:
-          - not_null
-          - unique
 
       - name: payment_description
         description: "{{ doc('column__stg_wallet__payment_description') }}"

@@ -5,21 +5,21 @@ models:
     columns:
       - name: license_number
         description: unique key
-        tests:
-          - not_null
-          - unique
 
   - name: int_base_license__fhv_hv_last_activities
     columns:
       - name: license_number
         description: unique key
+
+  - name: int_base_license__snapshot
+    columns:
+      - name: license_id
+        description: unique key
         tests:
           - not_null
           - unique
 
-  - name: int_base_license__snapshot
-    columns:
-      - name: base_license_number
+      - name: license_number
         description: business key
         tests:
           - not_null

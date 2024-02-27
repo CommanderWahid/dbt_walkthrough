@@ -28,12 +28,12 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
-on-run-start: 
-  - "{{ setup_audit_log() }}"
-  - "{{ create_udfs() }}"
-  - "{{ log_project_start_event() }}"
+#on-run-start: 
+#  - "{{ setup_audit_log() }}"
+#  - "{{ create_udfs() }}"
+#  - "{{ log_project_start_event() }}"
 
-on-run-end: "{{ log_project_end_event() }}"
+#on-run-end: "{{ log_project_end_event() }}"
 
 models:
   dbt_walkthrough:

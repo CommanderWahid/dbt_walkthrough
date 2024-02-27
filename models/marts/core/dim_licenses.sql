@@ -25,8 +25,8 @@ int_fhv_hv_licenses as (
 licenses as (
 
     select
-        snp.dbt_scd_id as license_id,  
-        snp.base_license_number as license_number,
+        snp.license_id,  
+        snp.license_number,
         snp.entity_name,
         snp.telephone_number,
         snp.shl_endorsed,
@@ -49,10 +49,10 @@ licenses as (
         snp.version_num
     from snapshot_licenses snp 
          left join int_fhv_licenses int_fhv 
-            on snp.base_license_number = int_fhv.license_number
+            on snp.license_number = int_fhv.license_number
             and snp.is_current_version 
          left join int_fhv_hv_licenses int_fhv_hv 
-            on snp.base_license_number = int_fhv_hv.license_number
+            on snp.license_number = int_fhv_hv.license_number
             and snp.is_current_version 
 )
 

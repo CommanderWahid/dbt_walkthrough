@@ -6,9 +6,14 @@ models:
     columns:
       - name: license_id
         description: ""
+        tests:
+          - not_null
+          - unique
 
       - name: license_number
         description: ""
+        tests:
+          - not_null
 
       - name: entity_name
         description: ""
@@ -75,49 +80,84 @@ models:
     columns:
       - name: rate_code_id
         description: ""
+        tests:
+          - not_null
+          - unique
 
       - name: rate_code
         description: ""
+        tests:
+          - not_null
 
   - name: dim_trip_modes
     description: ""
     columns:
       - name: trip_mode_id
         description: ""
+        tests:
+          - not_null
+          - unique
 
       - name: trip_mode
         description: ""
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Yellow', 'Green', 'Fhv', 'FhvHv','Not available']
+              config:
+                severity: error
+                error_if: ">10"
+                warn_if: ">=1"
 
   - name: dim_trip_types
     description: ""
     columns:
       - name: trip_type_id
         description: ""
+        tests:
+          - not_null
+          - unique
 
       - name: trip_type
         description: ""
+        tests:
+          - not_null
 
   - name: dim_payment_types
     description: ""
     columns:
       - name: payment_type_id
         description: ""
+        tests:
+          - not_null
+          - unique
 
       - name: payment_type
         description: ""
+        tests:
+          - not_null
 
   - name: dim_trip_zones
     description: ""
     columns:
       - name: location_id
         description: ""
+        tests:
+          - not_null
+          - unique
 
       - name: borough
         description: ""
+        tests:
+          - not_null
 
       - name: zone
         description: ""
+        tests:
+          - not_null
 
       - name: service_zone
         description: ""
+        tests:
+          - not_null
 

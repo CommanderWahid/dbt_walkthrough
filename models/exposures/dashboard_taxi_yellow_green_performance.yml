@@ -1,0 +1,26 @@
+version: 2
+
+exposures:
+
+  - name: dashboard_taxi_yellow_green_performance
+    label: Green and yellow taxi trips performance
+    type: dashboard
+    maturity: high
+    description: >
+      where is the perf of green and yellow taxi trips ?
+
+    depends_on:
+      - ref('fct_green_trips')
+      - ref('fct_yellow_trips')
+      - ref('dim_payment_types')
+      - ref('dim_rate_codes')
+      - ref('dim_trip_modes')
+      - ref('dim_trip_types')
+      - ref('dim_trip_zones')
+      - metric('total_amount')
+      - metric('passenger_count')
+      - metric('trip_count_yellow_green')
+
+    owner:
+      name: Wahid Atoui
+      email: watoui@scop-it.com

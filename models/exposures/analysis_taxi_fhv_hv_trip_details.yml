@@ -1,0 +1,18 @@
+version: 2
+
+exposures:
+
+  - name: analysis_taxi_fhv_hv_trip_details
+    label: Fhv and hv taxi trip details
+    type: analysis
+    maturity: medium
+    description: >
+      where is the details of fhv and hv taxi trips ?
+
+    depends_on:
+      - ref('rpt_fhv_hv_trip_details')
+      - ref('dim_licenses')
+
+    owner:
+      name: Wahid Atoui
+      email: watoui@scop-it.com

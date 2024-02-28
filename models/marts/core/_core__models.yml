@@ -109,6 +109,9 @@ models:
                 error_if: ">10"
                 warn_if: ">=1"
 
+      - name: trip_mode_descr
+        description: ""
+
   - name: dim_trip_types
     description: ""
     columns:

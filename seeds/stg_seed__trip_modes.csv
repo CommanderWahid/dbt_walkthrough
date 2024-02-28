@@ -1,0 +1,6 @@
+trip_mode,trip_mode_descr
+Not available,Not available
+Yellow,Describes yellow taxi trip data
+Green,Describes SHL trip data
+Fhv,Describes FHV trip data
+FhvHv,Describes High Volume FHV trip data

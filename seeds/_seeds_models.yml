@@ -1,0 +1,14 @@
+version: 2
+
+seeds:
+  - name: stg_seed__trip_modes
+    description: A mapping of trip mode codes to trip mode descriptions
+    columns:
+      - name: trip_mode
+        description: ""
+        tests:
+          - unique
+          - not_null ""
+
+      - name: trip_mode_descr
+        description: ""

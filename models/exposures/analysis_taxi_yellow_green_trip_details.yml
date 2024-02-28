@@ -1,0 +1,19 @@
+version: 2
+
+exposures:
+
+  - name: analysis_taxi_yellow_green_trip_details
+    label: yellow and green taxi trip details
+    type: analysis
+    maturity: medium
+    description: >
+      where is the details of yellow and green taxi trips ?
+
+    depends_on:
+      - ref('rpt_yellow_green_trip_details')
+      - ref('rpt_yellow_green_location_revenues')
+      - ref('rpt_yellow_green_monthly_revenues')
+
+    owner:
+      name: Wahid Atoui
+      email: watoui@scop-it.com

@@ -33,7 +33,7 @@ on-run-start:
   - "{{ create_udfs() }}"
   - "{{ log_project_start_event() }}"
 
-#on-run-end: "{{ log_project_end_event() }}"
+on-run-end: "{{ log_project_end_event() }}"
 
 models:
   dbt_walkthrough:
